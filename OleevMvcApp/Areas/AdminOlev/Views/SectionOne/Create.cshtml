@@ -1,0 +1,14 @@
+﻿@model SectionOne
+
+
+
+<div class="col-lg-6">
+    <form method="post" enctype="multipart/form-data">
+        <input class="form-control mb-3" asp-for="Header" />
+        <input class="form-control mb-3" asp-for="SubHeader" />
+        <input class="form-control mb-3" asp-for="Description" />
+        <input class="form-control mb-3" type="file" asp-for="PhotoUrl" />
+        <input class="btn btn-success text-white btn-sm" type="submit" value="Create"/>
+    </form>
+</div>
+

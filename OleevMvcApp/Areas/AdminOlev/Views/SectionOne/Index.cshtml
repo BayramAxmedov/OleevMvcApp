@@ -1,0 +1,80 @@
+﻿@model List<SectionOne>
+
+
+
+
+
+ <!-- Start Contentbar -->    
+            <div class="contentbar">                
+                <!-- Start row -->
+                <div class="row">
+                    <!-- Start col -->
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">
+                                    <a href="/adminolev/SectionOne/create">Create</a>
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="default-datatable" class="display table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Header</th>
+                                                <th>SubHeader</th>
+                                                <th>Description</th>
+                                                <th>Image</th>
+                                                <th>
+
+                                                </th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            @foreach (var item in Model)
+                                                {
+                                                 
+                                                
+                                            <tr>
+                                                <td>@item.Header</td>
+                                                <td>@item.SubHeader</td>
+                                                <td>@item.Description</td>
+                                                <td>
+                                                    <img width="300" src="@item.PhotoUrl" />
+                                                </td>
+                                         
+                                                <td>
+                                                    <a href="/adminolev/SectionOne/edit/@item.Id" class="btn btn-primary btn-sm text-white">Edit</a>
+                                                    <a href="/adminolev/SectionOne/detail/@item.Id" class="btn btn-warning btn-sm text-white">Detail</a>
+                                                    <a href="/adminolev/SectionOne/delete/@item.Id" class="btn btn-danger btn-sm text-white">Delete</a>
+                                                </td>
+                                            </tr>
+                                           }
+
+                                        </tbody>
+                                        <tfoot>
+
+                                            <tr>
+                                               <th>Header</th>
+                                                <th>SubHeader</th>
+                                                <th>Description</th>
+                                                <th>Image</th>
+                                                <th>
+
+                                                </th>
+                                            
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+               
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End Contentbar -->
